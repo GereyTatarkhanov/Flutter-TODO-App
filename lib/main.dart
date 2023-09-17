@@ -4,7 +4,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'features/home_page.dart';
 
 void main() async {
-
   await Hive.initFlutter();
   await Hive.openBox('my_box');
   runApp(const MainApp());
@@ -15,12 +14,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
-      theme: ThemeData(
-        primarySwatch: Colors.indigo
-      ),
-      );
+      theme: ThemeData(primarySwatch: Colors.indigo),
+    );
   }
 }
