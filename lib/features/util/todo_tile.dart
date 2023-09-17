@@ -56,16 +56,18 @@ class ToDoTile extends StatelessWidget {
                   ),
             
                   // Task Name
-                  Text(
-                    taskName.toUpperCase(),
-                    style:  TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      decoration: taskCompleted 
-                      ? TextDecoration.lineThrough 
-                      : TextDecoration.none
-                    ),
-                    ),
+                  Flexible(
+                    child: Text(
+                      taskName,
+                      style:  TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        decoration: taskCompleted 
+                        ? TextDecoration.lineThrough 
+                        : TextDecoration.none
+                      ),
+                      ),
+                  ),
                ],
              ),
           ),
